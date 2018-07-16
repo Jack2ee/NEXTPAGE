@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+/* 너비 및 여백 지정 */
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+	width: 100%;
+	margin: auto;
+}
+</style>
+</head>
+<body>
+
+
+	<div class="container">
+	
+
+	
+					<div class="modal-body">
+
+						<div id="myCarousel" class="carousel slide " data-ride="carousel">
+
+							<!-- Indicators -->
+							<!-- data-slide-to="0" 속성을 사진 갯수만큼 지정한다. -->
+							<!-- class="active" 속성은 첫 번째로 보여질 사진에 지정한다. -->
+							<ol class="carousel-indicators">
+								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+								<li data-target="#myCarousel" data-slide-to="1"></li>
+								<li data-target="#myCarousel" data-slide-to="2"></li>
+							</ol>
+
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+
+								<!-- 사진 한 장당 <div><img></div>태그 구성 -->
+								<!-- 이미지 파일 이름은 영숫자(소문자)로만 표기된 파일 이름 권장 -->
+								<!-- class="item active" 속성은 첫 번째로 보여질 사진에 지정 -->
+								<div class="item active">
+									<img src="../assets/1.jpg" alt="chicago.jpg">
+								</div>
+
+								<div class="item">
+									<img src="../assets/2.jpg" alt="la.jpg">
+								</div>
+
+								<div class="item">
+									<img src="../assets/3.jpg" alt="ny.jpg">
+								</div>
+
+							</div>
+
+							<!-- Left and right controls (왼쪽 오른쪽 화살표)-->
+							<a class="left carousel-control" href="#myCarousel" role="button"
+								data-slide="prev"> <span
+								class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a> <a class="right carousel-control" href="#myCarousel"
+								role="button" data-slide="next"> <span
+								class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+
+						<p>카러셀 예시</p>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
+<!--[출처]https://blog.naver.com/sam_sist/220913121765-->
+

@@ -1,0 +1,11 @@
+<h1>All Contacts</h1>
+<ul>
+    <% @all_contacts.each do |contact| %>
+        <li><%= contact.name %> : <%= contact.content %> </li>
+        <div class="card-image">
+            <% if contact.image.url %>
+                <img src="<%= contact.image.url %>">
+            <% end %>
+        </div>
+    <% end %>
+</ul>
