@@ -22,6 +22,8 @@ class HomeController < ApplicationController
 
   def members_lounge
     @posts=Post.all
+    
+    
   end
 
 end

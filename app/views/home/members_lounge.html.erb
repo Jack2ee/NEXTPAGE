@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <style>
 * {
     box-sizing: border-box;
@@ -95,8 +96,19 @@ body {
     }
 }
 </style>
-<body>
 
+
+
+
+
+<body>
+<script type="text/javascript">
+<%if current_user.admin%>
+<%else%>
+alert("앗 아직 정회원이 아니시군요 :( 곧 관리자가 승인해 주실거에요 !");
+window.location.href = "/home/index";
+<%end%>
+</script>
 <!-- Header -->
 <div class="header">
  <h1 class="head">NEXT</h1>
