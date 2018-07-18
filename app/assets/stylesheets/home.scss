@@ -48,3 +48,21 @@ $header-height: 70px;
     text-align:center; 
     font-size:1.2em;
   }
+
+.full{
+  background-image:url("archi1.png");
+  overflow-y: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+}
+
+.words2{
+  height: 320px;
+  width: 720px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+}
