@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+
+<%@post.comments.each do |comment|%>
+<%=comment.content%><br>
+<% end%>
+
+<%=form_for Comment.new, url:post_comments_path(@post.id) do |f|%>
+<%=f.label "댓글"%>
+<%=f.text_field :content%><br>
+<%=f.submit '작성'%>
+<%end%>
