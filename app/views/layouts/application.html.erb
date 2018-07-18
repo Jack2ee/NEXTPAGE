@@ -8,8 +8,11 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu|Nanum+Pen+Script" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Quicksand|Slabo+27px" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
   </head>
 
   <body>
@@ -33,13 +36,17 @@
           <%= link_to new_contact_path do %>
             <li class="item font">recruit</li>
           <% end %>
-          <% if user_signed_in? %>
+          <% if user_signed_in? %> 
+          <% if current_user.admin %>
             <li class="item font"><%= link_to 'members lounge', members_lounge_path %> </li>
-            <li class="item font"><i class="far fa-smile"></i> <a href=/members><%= current_user.name %></a>님 안녕하세요!</li>
+             <li class="item font"><i class="far fa-smile"></i> <a href=/members><%= current_user.name %></a>님 안녕하세요!</li>
             <li class="item font"><%= link_to 'Log-out', session_path(current_user), method: 'delete' %> </li>
-            <% if current_user.admin %>
+           
+           <% else%>
               <li class= "item font"><%= link_to 'members lounge', members_lounge_path %></li>
               <li class="item font"><Administrator></li>
+             <li class="item font"><i class="far fa-smile"></i> <a href=/members><%= current_user.name %></a>님 안녕하세요!</li>
+            <li class="item font"><%= link_to 'Log-out', session_path(current_user), method: 'delete' %> </li>
             <% end %>
           <% else %>
             <li class='item font text-right'><%= link_to 'sign-up', new_user_path %> | <%= link_to 'sign-in', new_session_path%>

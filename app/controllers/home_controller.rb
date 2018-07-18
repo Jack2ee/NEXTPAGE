@@ -10,8 +10,20 @@ class HomeController < ApplicationController
 
   def activity
   end
+  def create
+    @post=Post.new
+    @post.title=params[:title]
+    @post.content=params[:content]
+    @post.save
+    redirect_to '/'
+  end
+  def new 
+  end
 
   def members_lounge
+    @posts=Post.all
+    
+    
   end
 
 end
