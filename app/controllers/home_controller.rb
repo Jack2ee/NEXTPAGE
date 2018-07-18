@@ -11,4 +11,7 @@ class HomeController < ApplicationController
   def activity
   end
 
+  def members_lounge
+  end
+
 end
