@@ -16,18 +16,17 @@
   <!-- 추가! -->
     <div id="global-header">
       <div class="container d-flex">
-        <div class="logo font"><a href='/index'>NEXT</div>
+        <div class="logo font"><a href='/index'>NEXT</a></div>
         <ul class="menu">
-          <li><div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              about
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="/intro">intro</a>
-              <a class="dropdown-item" href="/activity">activity</a>
-            </div>
-          </div>
-          </li>  
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                about
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/intro">intro</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/activity">activity</a>
+              </div>
           <a href="/members">
             <li class="item font">members</li>
           </a>
@@ -46,25 +45,18 @@
             <li class='item font text-right'><%= link_to 'sign-up', new_user_path %> | <%= link_to 'sign-in', new_session_path%>
             <%# <li class="item"><%= link_to 'member lounge', new_session_path %> </li>
           <% end %>
-              
         </ul>
       </div>
     </div>
 
+    <div id="wrapper">
+      <%= flash[:alert] %>
       <%= yield %>
-    
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Bootstrap Dropdown Hover JS -->
-    <script src="js/bootstrap-dropdownhover.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
