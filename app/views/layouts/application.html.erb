@@ -13,15 +13,88 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Quicksand|Slabo+27px" rel="stylesheet">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   </head>
 
   <body>
-  <!-- 추가! -->
+  <style>
+
+  .dropdown-menu {
+    border: none !important;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn {
+  background-color: transparent !important;
+  background:transparent !important;
+  border-color: transparent !important;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  color: gray;
+  
+}
+.btn:hover{
+   background-color: transparent !important;
+  background:transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  color:gray !important;
+}
+.btn:active{
+   background-color: transparent !important;
+  background:transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  color:gray !important;
+  border: none !important;
+}
+
+.nav-item:hover{
+  background-color: transparent !important;
+  background:transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  color:gray !important;
+}
+li:hover{
+   background-color: transparent !important;
+  background:transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  color:gray !important;
+}
+a:hover{
+   background-color: transparent !important;
+  background:transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  color:gray !important;
+}
+i:hover{
+   background-color: transparent !important;
+  background:transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  color:gray !important;
+}
+
+  </style>
+  <script>
+  
+  </script>
+  <div class="navbar navbar-fixed-top">
     <div id="global-header">
       <div class="container d-flex">
-        <div class="logo font"><a href='/index'>NEXT</a></div>
+        <div class="nav-item logo font"><a href='/index'>NEXT</a></div>
         <ul class="menu">
-            <div class="dropdown">
+            <div class="dropdown font">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 about
               </button>
@@ -31,31 +104,31 @@
                 <a class="dropdown-item" href="/activity">activity</a>
               </div>
           <a href="/members">
-            <li class="item font">members</li>
+            <li class="nav-item font">members</li>
           </a>
           <%= link_to new_contact_path do %>
-            <li class="item font">recruit</li>
+            <li class="nav-item font">recruit</li>
           <% end %>
           <% if user_signed_in? %> 
           <% if current_user.admin %>
-            <li class="item font"><%= link_to 'members lounge', members_lounge_path %> </li>
-             <li class="item font"><i class="far fa-smile"></i> <a href=/members><%= current_user.name %></a>님 안녕하세요!</li>
-            <li class="item font"><%= link_to 'Log-out', session_path(current_user), method: 'delete' %> </li>
+            <li class="nav-item font"><%= link_to 'members lounge', members_lounge_path %> </li>
+             <li class="nav-item font"><i class="far fa-smile"></i> <a href=/members><%= current_user.name %></a>님 안녕하세요!</li>
+            <li class="nav-item font"><%= link_to 'Log-out', session_path(current_user), method: 'delete' %> </li>
            
            <% else%>
-              <li class= "item font"><%= link_to 'members lounge', members_lounge_path %></li>
-              <li class="item font"><Administrator></li>
-             <li class="item font"><i class="far fa-smile"></i> <a href=/members><%= current_user.name %></a>님 안녕하세요!</li>
-            <li class="item font"><%= link_to 'Log-out', session_path(current_user), method: 'delete' %> </li>
+              <li class= "nav-item font"><%= link_to 'members lounge', members_lounge_path %></li>
+              <li class="nav-item font"><Administrator></li>
+             <li class="nav-item font"><i class="far fa-smile"></i> <a href=/members><%= current_user.name %></a>님 안녕하세요!</li>
+            <li class="nav-item font"><%= link_to 'Log-out', session_path(current_user), method: 'delete' %> </li>
             <% end %>
           <% else %>
-            <li class='item font text-right'><%= link_to 'sign-up', new_user_path %> | <%= link_to 'sign-in', new_session_path%>
+            <li class='nav-item font text-right'><%= link_to 'sign-up', new_user_path %> | <%= link_to 'sign-in', new_session_path%>
             <%# <li class="item"><%= link_to 'member lounge', new_session_path %> </li>
           <% end %>
         </ul>
       </div>
     </div>
-
+</div>
     <div id="wrapper">
       <%= flash[:alert] %>
       <%= yield %>

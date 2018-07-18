@@ -30,8 +30,21 @@
     margin: 0 auto;
   }
   
-  .font {
+.font {
     font-family: 'Slabo 27px', serif;
     font-family: 'Quicksand', sans-serif;
-    color: black;
+    color: gray;
+  }
+
+
+#global-header {
+  background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+  
+}
+#global-header:hover {
+  background-color: transparent;
+   background: transparent;
+   border-color: transparent;
   }
