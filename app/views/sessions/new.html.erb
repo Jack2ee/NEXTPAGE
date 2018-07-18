@@ -1,10 +1,26 @@
-<h4>LOGIN</h4>
-<h3>NEXT</h3>
-
-<%= form_tag sessions_path do %>
-        <input type="email" placeholder="ID" name='email'><br>
-        <input type="password" placeholder="PASSWORD" name='password'><br>
-        <input type="submit" value='로그인'><br>
-
-        <%=link_to '회원가입', new_user_path %>
-<% end %>
+<div class='d-flex outline'>
+        <div class='container d-flex justify-content-center'>
+                <div class='row w-100 align-items-center'>
+                        <div class='col d-flex h-50 justify-content-center align-items-center border'>
+                                <div class='container w-50 justify-content-center'>
+                                <%# <div class='w-50 align-items-center'> %>
+                                        <div class='w-100'>
+                                                <div><h5 class='text-align-center font'>LOGIN @ NEXT</h5></div><br>
+                                                <div>
+                                                <%= form_tag sessions_path do %>
+                                                        <input type="email" placeholder="ID" name='email'><br>
+                                                        <input type="password" placeholder="PASSWORD" name='password'><br>
+                                                        <div class='d-flex justify-content-between'>
+                                                                <div><p class='font'>회원가입은 <%=link_to '여기', new_user_path%>에서 할 수 있습니다.</p></div>
+                                                                <div><button type='submit' class='btn btn-outline-secondary btn-lg'><h5 class='font'>log-in</h5></div>
+                                                                <% end %>
+                                                        </div>
+                                                        
+                                                </div>
+                                        </div>
+                                </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>

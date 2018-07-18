@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Bootstrap Example</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -12,9 +11,16 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 /* 너비 및 여백 지정 */
-.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+
+html,body{
+   height:100%;
+}
+.carousel,.item,.active{
+   height:100%;
+ }
+.carousel-inner{
 	width: 100%;
-	margin: auto;
+    height:100%;
 }
 </style>
 </head>
@@ -70,7 +76,6 @@
 							</a>
 						</div>
 
-						<p>카러셀 예시</p>
 					</div>
 					
 				</div>

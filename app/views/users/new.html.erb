@@ -1,12 +1,27 @@
-<h1>Sign up</h1>
-<%= form_tag users_path do %>
-    Email :
-    <input type="email" name="email"><br>
-    Password : 
-    <input type="password" name="password"><br> 
-    Password Confirmation :
-    <input type="password" name="password_confirmation"><br>
-    Name : 
-    <input type="text" name="name"><br>
-    <input type="submit" value="sign up"><br>
-<% end %>
+<div class='d-flex outline'>
+        <div class='container d-flex justify-content-center'>
+                <div class='row w-100 align-items-center'>
+                        <div class='col d-flex h-50 justify-content-center align-items-center'>
+                                <div class='container w-50 justify-content-center'>
+                                <%# <div class='w-50 align-items-center'> %>
+                                        <div class='w-100'>
+                                                <div><h5 class='text-align-center font'>Sign-up</h5></div><br>
+                                                <div>
+                                                <%= form_tag users_path do %>
+                                                    <input type="email" placeholder='Email' name="email"><br>
+                                                    <input type="password" placeholder='Password' name="password"><br> 
+                                                    <input type="password" placeholder='Password Confirmation' name="password_confirmation"><br>
+                                                    <input type="text" placeholder='Name' name="name"><br>
+                                                <div class='text-right'>
+                                                <button type='submit' class='btn btn-outline-secondary btn-lg'><h5 class='font'>complete</h5></button>
+                                                </div>
+                                                <% end %>
+                                              </div>
+                                        </div>
+                                </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>
+

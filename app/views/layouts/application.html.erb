@@ -10,52 +10,63 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Gaegu|Nanum+Pen+Script" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Slabo+27px" rel="stylesheet">
   </head>
 
   <body>
   <!-- 추가! -->
     <div id="global-header">
-      <div class="container">
-        <div class="logo">logo</div>
+      <div class="container d-flex">
+        <div class="logo font"><a href='/index'>NEXT</div>
         <ul class="menu">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                about
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="/intro">intro</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/activity">activity</a>
-              </div>
+          <li><div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              about
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/intro">intro</a>
+              <a class="dropdown-item" href="/activity">activity</a>
+            </div>
+          </div>
+          </li>  
           <a href="/members">
-            <li class="item">members</li>
+            <li class="item font">members</li>
           </a>
           <%= link_to new_contact_path do %>
-            <li class="item">recruit</li>
+            <li class="item font">recruit</li>
           <% end %>
           <% if user_signed_in? %>
-            <li class="item"><%= link_to 'members lounge', contacts_path %> </li>
-            <li class="item"><%= link_to 'Sign out', session_path(current_user), method: 'delete' %> </li>
-            <li class="item"><%= current_user.name %> </li>
+            <li class="item font"><%= link_to 'members lounge', members_lounge_path %> </li>
+            <li class="item font"><i class="far fa-smile"></i> <a href=/members><%= current_user.name %></a>님 안녕하세요!</li>
+            <li class="item font"><%= link_to 'Log-out', session_path(current_user), method: 'delete' %> </li>
             <% if current_user.admin %>
-              <li class= "item"><%= link_to 'members lounge', contacts_path %></li>
-              <li class="item"><Administrator></li>
+              <li class= "item font"><%= link_to 'members lounge', members_lounge_path %></li>
+              <li class="item font"><Administrator></li>
             <% end %>
           <% else %>
-            <li class="item"><%= link_to 'member lounge', new_session_path %> </li>
+            <li class='item font text-right'><%= link_to 'sign-up', new_user_path %> | <%= link_to 'sign-in', new_session_path%>
+            <%# <li class="item"><%= link_to 'member lounge', new_session_path %> </li>
           <% end %>
+              
         </ul>
       </div>
     </div>
 
-    <div id="wrapper">
-      <%= flash[:alert] %>
       <%= yield %>
-    </div>
+    
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Dropdown Hover JS -->
+    <script src="js/bootstrap-dropdownhover.min.js"></script>
+
   </body>
 </html>

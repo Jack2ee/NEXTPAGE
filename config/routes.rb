@@ -22,5 +22,6 @@ Rails.application.routes.draw do
   get '/contact' => 'home#contact'
   post 'home/create' => 'home#create'
   get 'home/new'
+  get '/members_lounge' => 'home#members_lounge'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -19,4 +19,9 @@ class HomeController < ApplicationController
   end
   def new 
   end
+
+  def members_lounge
+    @posts=Post.all
+  end
+
 end
