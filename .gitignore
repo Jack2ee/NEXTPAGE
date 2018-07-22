@@ -8,8 +8,12 @@
 /.bundle
 
 # Ignore the default SQLite database.
+<<<<<<< HEAD
 /db/*.sqlite3
 /db/*.sqlite3-journal
+=======
+
+>>>>>>> e02ea04f6731c624e3ab7c6055902494e904ccca
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -19,6 +23,9 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+<<<<<<< HEAD
 
 # Ignore application configuration
 /config/application.yml
+=======
+>>>>>>> e02ea04f6731c624e3ab7c6055902494e904ccca

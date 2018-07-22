@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD
     <title>Practice</title>
     <%= csrf_meta_tags %>
 
@@ -10,5 +11,146 @@
 
   <body>
     <%= yield %>
+=======
+    <title>Rails5practice</title>
+    <%= csrf_meta_tags %>
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu|Nanum+Pen+Script" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Slabo+27px" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  </head>
+
+  <body>
+  <style>
+
+#title {
+  color: gray;
+}
+
+  .dropdown-menu {
+    border: none !important;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn {
+  background-color: transparent !important;
+  background:transparent !important;
+  border-color: transparent !important;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  color: gray !important;
+}
+.btn:hover{
+   background-color: transparent !important;
+  background:transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  color:gray !important;
+}
+.btn:active{
+   background-color: transparent !important;
+  background:transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  color:gray !important;
+  border: none !important;
+}
+
+.nav-item:hover{
+  background-color: transparent !important;
+  background:transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  color:gray !important;
+}
+li:hover{
+   background-color: transparent !important;
+  background:transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  color:gray !important;
+}
+a:hover{
+   background-color: transparent !important;
+  background:transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+i:hover{
+   background-color: transparent !important;
+  background:transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  color:gray !important;
+}
+
+  </style>
+  <script>
+  
+  </script>
+  <div class="navbar navbar-fixed-top">
+    <div id="global-header">
+      <div class="container d-flex">
+        <div class="nav-item logo font"><a id="title" href='/index'>NEXT</a></div>
+        <ul class="menu">
+            <div class="dropdown font">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                about
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/intro">intro</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/activity">activity</a>
+              </div>
+          <a href="/members">
+            <li class="nav-item font">members</li>
+          </a>
+          <%= link_to new_contact_path do %>
+            <li class="nav-item font">recruit</li>
+          <% end %>
+          <% if user_signed_in? %> 
+          <% if current_user.admin %>
+            <li class="nav-item font" id="title"><%= link_to 'members lounge', members_lounge_path %> </li>
+             <li class="nav-item font"><i class="far fa-smile"></i> <a href=/members><%= current_user.name %></a>님 안녕하세요!</li>
+            <li class="nav-item font"><%= link_to 'Log-out', session_path(current_user), method: 'delete' %> </li>
+           
+           <% else%>
+              <li class= "nav-item font"><%= link_to 'members lounge', members_lounge_path %></li>
+              <li class="nav-item font"><Administrator></li>
+             <li class="nav-item font"><i class="far fa-smile"></i> <a href=/members><%= current_user.name %></a>님 안녕하세요!</li>
+            <li class="nav-item font"><%= link_to 'Log-out', session_path(current_user), method: 'delete' %> </li>
+            <% end %>
+          <% else %>
+            <li class='nav-item font text-right'><%= link_to 'sign-up', new_user_path %> | <%= link_to 'sign-in', new_session_path %>
+            <%# <li class="item"><%= link_to 'member lounge', new_session_path %> </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+</div>
+    <div id="wrapper">
+      <%= flash[:alert] %>
+      <%= yield %>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+>>>>>>> e02ea04f6731c624e3ab7c6055902494e904ccca
   </body>
 </html>

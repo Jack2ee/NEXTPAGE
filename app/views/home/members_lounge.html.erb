@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    
+  
+}
+.container {
+  position: relative;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.container:hover .image {
+  opacity: 0.3;
+}
+.text {
+  background-color: transparent;
+  color: black;
+  font-size: 16px;
+  padding: 16px 32px;
+  font-family: 'Gaegu', cursive;
+  font-family: 'Nanum Pen Script', cursive;
+}
+.head {
+  font-family: 'Gaegu', cursive;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 40px;
+}
+.head2 {
+  font-family: 'Gaegu', cursive;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 20px;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container:hover .middle {
+  opacity: 1;
+}
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+</style>
+
+
+
+
+
+<body>
+<script type="text/javascript">
+<%if current_user.admin%>
+<%else%>
+alert("앗 아직 정회원이 아니시군요 :( 곧 관리자가 승인해 주실거에요 !");
+window.location.href = "/home/index";
+<%end%>
+</script>
+<!-- Header -->
+<div class="header">
+ <h1 class="head">NEXT</h1>
+ <h3 class="head2">
+ <a href="/posts/new"><i class="fas fa-pen-nib"></i></a></h3>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <div class="container">
+    <img src="../assets/L1.jpg" style="width:100%" class="image">
+    <div class="middle">
+    <div class="text">
+    글:<%=@posts.find(2).title%><br>
+    <%=@posts.find(2).content%><br>
+    <%=@posts.find(2).created_at.strftime("%b %d, %Y")%><br>
+    댓글 <br>
+    <%@posts.find(2).comments.each do |comment|%>
+    <%=comment.content%><br>
+    <% end%>
+    </div>
+    <a href="/posts/2"><i class="fas fa-plus"></i></a>
+    </div>
+    </div>
+
+    <div class="container">
+    <img src="../assets/L2.jpg" style="width:100%" class="image">
+    <div class="middle">
+    <div class="text"> 
+    글:<%=@posts.find(6).title%><br>
+    <%=@posts.find(6).content%><br><br>
+    댓글 <br>
+    <%@posts.find(6).comments.each do |comment|%>
+    <%=comment.content%><br>
+    <% end%>
+    </div>
+    <a href="/posts/6"><i class="fas fa-plus"></i></a>
+    </div>
+    
+    </div>
+    <div class="container">
+    <img src="../assets/L3.jpg" style="width:100%" class="image">
+    <div class="middle">
+    <div class="text"></div>
+    </div>
+    </div>
+    <div class="container">
+    <img src="../assets/L4.jpg" style="width:100%" class="image">
+    <div class="middle">
+    <div class="text"></div>
+    </div>
+    </div>
+    
+  </div>
+  <div class="column">
+    <div class="container">
+    <img src="../assets/L5.jpg" style="width:100%" class="image">
+    <div class="middle">
+    <div class="text">
+     글:<%=@posts.find(3).title%><br>
+    <%=@posts.find(3).content%><br><br>
+    댓글 <br>
+    <%@posts.find(3).comments.each do |comment|%>
+    <%=comment.content%><br>
+    <% end%>
+    </div>
+    <a href="/posts/3"><i class="fas fa-plus"></i></a>
+    </div>
+    </div>
+    <div class="container">
+    <img src="../assets/L6.jpg" style="width:100%" class="image">
+    <div class="middle">
+    <div class="text">
+     글:<%=@posts.find(7).title%><br>
+    <%=@posts.find(7).content%><br><br>
+    댓글 <br>
+    <%@posts.find(7).comments.each do |comment|%>
+    <%=comment.content%><br>
+    <% end%>
+    </div>
+    <a href="/posts/7"><i class="fas fa-plus"></i></a>
+    </div>
+    </div>
+    <div class="container">
+    <img src="../assets/L7.jpg" style="width:100%" class="image">
+    <div class="middle">
+    <div class="text"></div>
+    </div>
+    </div>
+    <div class="container">
+    <img src="../assets/L8.jpg" style="width:100%" class="image">
+    <div class="middle">
+    <div class="text"></div>
+    </div>
+    </div>
+    
+  </div>  
+  <div class="column">
+    <div class="container">
+    <img src="../assets/L9.jpg" style="width:100%" class="image">
+    <div class="middle">
+    <div class="text">
+     글:<%=@posts.find(4).title%><br>
+    <%=@posts.find(4).content%><br><br>
+    댓글 <br>
+    <%@posts.find(4).comments.each do |comment|%>
+    <%=comment.content%><br>
+    <% end%>
+    </div>
+    <a href="/posts/4"><i class="fas fa-plus"></i></a>
+    </div>
+    </div>
+    <div class="container">
+    <img src="../assets/L10.jpg" style="width:100%" class="image">
+    <div class="middle">
+    <div class="text">
+     글:<%=@posts.find(8).title%><br>
+    <%=@posts.find(8).content%><br><br>
+    댓글 <br>
+    <%@posts.find(8).comments.each do |comment|%>
+    <%=comment.content%><br>
+    <% end%>
+    </div>
+    <a href="/posts/8"><i class="fas fa-plus"></i></a>
+    </div>
+    </div>
+    <div class="container">
+    <img src="../assets/L11.jpg" style="width:100%" class="image">
+    <div class="middle">
+    <div class="text"></div>
+    </div>
+    </div>
+    <div class="container">
+    <img src="../assets/L12.jpg" style="width:100%" class="image">
+    <div class="middle">
+    <div class="text"></div>
+    </div>
+    </div>
+   
+  </div>
+  <div class="column">
+  <div class="container">
+  <img src="../assets/L13.jpg" style="width:100%" class="image">
+  <div class="middle">
+  <div class="text">
+   글:<%=@posts.find(5).title%><br>
+    <%=@posts.find(5).content%><br><br>
+    댓글 <br>
+    <%@posts.find(5).comments.each do |comment|%>
+    <%=comment.content%><br>
+    <% end%>
+    </div>
+    <a href="/posts/5"><i class="fas fa-plus"></i></a>
+  </div>
+  </div>
+  <div class="container">
+  
+  <img src="../assets/L14.jpg" style="width:100%" class="image">
+  <div class="middle">
+  <div class="text">
+   글:<%=@posts.find(9).title%><br>
+    <%=@posts.find(9).content%><br><br>
+    댓글 <br>
+    <%@posts.find(9).comments.each do |comment|%>
+    <%=comment.content%><br>
+    <% end%>
+    </div>
+    <a href="/posts/9"><i class="fas fa-plus"></i></a>
+  </div></div>
+  <div class="container">
+  
+  <img src="../assets/L15.jpg" style="width:100%" class="image">
+  <div class="middle">
+  <div class="text"></div>
+  </div></div>
+  <div class="container">
+  <img src="../assets/L16.jpg" style="width:100%" class="image">
+  <div class="middle">
+  <div class="text"></div>
+  </div>
+ </div>
+ </div>
+  </div>
+  
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
