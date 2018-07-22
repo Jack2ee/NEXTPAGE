@@ -56,6 +56,3 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rails_db', '~> 2.0', '>= 2.0.3'
 gem 'figaro'
-group :production do
-  gem 'mysql2'
-  end
