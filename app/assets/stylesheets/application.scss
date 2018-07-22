@@ -21,7 +21,6 @@
   }
   
   a {
-    color: inherit;
     text-decoration: none;
   }
   
@@ -33,9 +32,8 @@
 .font {
     font-family: 'Slabo 27px', serif;
     font-family: 'Quicksand', sans-serif;
-    color: gray;
-  }
-
+    color: gray !important;
+}
 
 #global-header {
   background-color: transparent;
