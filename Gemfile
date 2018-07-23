@@ -7,11 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-<<<<<<< HEAD
-gem 'rails', '~> 5.0.2'
-=======
 gem 'rails', '~> 5.0.7'
->>>>>>> e02ea04f6731c624e3ab7c6055902494e904ccca
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -24,11 +20,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-<<<<<<< HEAD
-gem 'figaro'
-=======
-
->>>>>>> e02ea04f6731c624e3ab7c6055902494e904ccca
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -38,14 +29,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-<<<<<<< HEAD
-# gem 'bcrypt', '~> 3.1.7'
-=======
 gem 'bcrypt', '~> 3.1.7'
 gem 'materialize-sass'
 gem 'carrierwave'
 gem 'mini_magick'
->>>>>>> e02ea04f6731c624e3ab7c6055902494e904ccca
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -66,15 +53,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-gem 'rails_db', '~> 2.0', '>= 2.0.3'
->>>>>>> e02ea04f6731c624e3ab7c6055902494e904ccca
-=======
+
 gem 'rails_db', '~> 2.0', '>= 2.0.3'
 gem 'figaro'
 group :production do
   gem 'mysql2'
   end
->>>>>>> for deploy
