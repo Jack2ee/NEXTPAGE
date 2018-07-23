@@ -24,8 +24,14 @@
 # Ignore Byebug command history file.
 .byebug_history
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Ignore application configuration
 /config/application.yml
 =======
 >>>>>>> e02ea04f6731c624e3ab7c6055902494e904ccca
+=======
+
+# Ignore application configuration
+/config/application.yml
+>>>>>>> for deploy

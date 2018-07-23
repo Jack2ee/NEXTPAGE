@@ -67,6 +67,14 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 gem 'rails_db', '~> 2.0', '>= 2.0.3'
 >>>>>>> e02ea04f6731c624e3ab7c6055902494e904ccca
+=======
+gem 'rails_db', '~> 2.0', '>= 2.0.3'
+gem 'figaro'
+group :production do
+  gem 'mysql2'
+  end
+>>>>>>> for deploy
