@@ -63,6 +63,7 @@ GEM
     ffi (1.9.25)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     figaro (1.1.1)
       thor (~> 0.14)
 =======
@@ -71,6 +72,10 @@ GEM
     figaro (1.1.1)
       thor (~> 0.14)
 >>>>>>> for deploy
+=======
+    figaro (1.1.1)
+      thor (~> 0.14)
+>>>>>>> 183353df0ab75b98e0720e312be89ba5f31b0afd
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.0.1)
@@ -280,4 +285,3 @@ BUNDLED WITH
    1.16.3
 =======
    1.16.1
->>>>>>> e02ea04f6731c624e3ab7c6055902494e904ccca

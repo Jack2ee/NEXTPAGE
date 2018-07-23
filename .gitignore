@@ -25,6 +25,7 @@
 .byebug_history
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Ignore application configuration
 /config/application.yml
@@ -35,3 +36,8 @@
 # Ignore application configuration
 /config/application.yml
 >>>>>>> for deploy
+=======
+
+# Ignore application configuration
+/config/application.yml
+>>>>>>> 183353df0ab75b98e0720e312be89ba5f31b0afd
